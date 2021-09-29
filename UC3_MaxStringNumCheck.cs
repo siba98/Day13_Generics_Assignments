@@ -26,7 +26,7 @@ namespace Day13_Generics_Assignments
             {
                 return thirdString;
             }
-            throw new Exception("FirstNumber, SecondNumber and ThirdNumber are same or Maybe 2 Numbers are Same");
+            throw new Exception("FirstNumber, SecondNumber and ThirdNumber are Same or Maybe 2 Numbers are Same");
         }
     }
 }
