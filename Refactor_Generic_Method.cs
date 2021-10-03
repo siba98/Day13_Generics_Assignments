@@ -20,7 +20,7 @@ namespace Day13_Generics_Assignments
             }
             else if (third.CompareTo(first) > 0 && third.CompareTo(second) > 0)
             {
-                Console.WriteLine("The Maximum is : " + third);
+                Console.WriteLine("The Maximum is: " + third);
                 return third;
             }
             return default;
