@@ -4,63 +4,26 @@ using System.Text;
 
 namespace Day13_Generics_Assignments
 {
-    public class Refactor_Generic_Method<T1> where T1 : IComparable
+    public class Refactor_Generic_Method
     {
-        public static int MaximumIntNumber(int firstNum, int secondNum, int thirdNum)
+        public T findMaximum<T>(T first, T second, T third) where T : struct, IComparable<T>
         {
-            if (firstNum.CompareTo(secondNum) > 0 && firstNum.CompareTo(thirdNum) > 0)
+            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
             {
-                return firstNum;
+                Console.WriteLine("The Maximum is : " + first);
+                return first;
             }
-            if (secondNum.CompareTo(firstNum) > 0 && secondNum.CompareTo(thirdNum) > 0)
+            else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
             {
-                return secondNum;
+                Console.WriteLine("The Maximum is : " + second);
+                return second;
             }
-            if (thirdNum.CompareTo(firstNum) > 0 && thirdNum.CompareTo(secondNum) > 0)
+            else if (third.CompareTo(first) > 0 && third.CompareTo(second) > 0)
             {
-                return thirdNum;
+                Console.WriteLine("The Maximum is : " + third);
+                return third;
             }
-            throw new Exception("FirstNumber, SecondNumber and ThirdNumber are same or Maybe 2 Numbers are same");
-        }
-
-        public static float MaxFloatNumber(float firstNum, float secondNum, float thirdNum)
-        {
-            if (firstNum.CompareTo(secondNum) > 0 && firstNum.CompareTo(thirdNum) > 0)
-            {
-                return firstNum;
-            }
-            if (secondNum.CompareTo(thirdNum) > 0 && secondNum.CompareTo(firstNum) > 0)
-            {
-                return secondNum;
-            }
-            if (thirdNum.CompareTo(firstNum) > 0 && thirdNum.CompareTo(secondNum) > 0)
-            {
-                return thirdNum;
-            }
-            throw new Exception("FirstNumber, SecondNumber and ThirdNumber are same or Maybe 2 Numbers are same");
-        }
-
-        public static string MaximumStringNumber(string firstString, string secondString, string thirdString)
-        {
-            if (firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) > 0 ||
-               firstString.CompareTo(secondString) >= 0 && firstString.CompareTo(thirdString) > 0 ||
-               firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) >= 0)
-            {
-                return firstString;
-            }
-            if (secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) > 0 ||
-               secondString.CompareTo(firstString) >= 0 && secondString.CompareTo(thirdString) > 0 ||
-               secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) >= 0)
-            {
-                return secondString;
-            }
-            if (thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) > 0 ||
-               thirdString.CompareTo(firstString) >= 0 && thirdString.CompareTo(secondString) > 0 ||
-               thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) >= 0)
-            {
-                return thirdString;
-            }
-            throw new Exception("FirstNumber, SecondNumber and ThirdNumber are same or Maybe 2 Numbers are same");
+            return default;
         }
     }
 }
