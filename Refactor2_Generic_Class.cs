@@ -28,7 +28,7 @@ namespace Day13_Generics_Assignments
                 Console.WriteLine("The Greatest  is : " + third);
             }
             else
-                Console.WriteLine("All are equal");
+                Console.WriteLine("All are Equal");
         }
     }        
 }
