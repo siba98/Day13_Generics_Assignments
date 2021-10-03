@@ -25,21 +25,19 @@ namespace Day13_Generics_Assignments
 
 
             //****************Refactor1******************
-            int checkInt3 = Refactor_Generic_Method<int>.MaximumIntNumber(87, 299, 389);
-            Console.WriteLine("Maximum Number:" + checkInt3);
-            float checkFloat3 = Refactor_Generic_Method<float>.MaxFloatNumber(67.5f, 35.47f, 88.65f);
-            Console.WriteLine("Maximum Number:" + checkFloat3);
-            string checkString3 = Refactor_Generic_Method<string>.MaximumStringNumber("12", "73", "76");
-            Console.WriteLine("Maximum Number:" + checkString3);
+            Refactor_Generic_Method checkMax = new Refactor_Generic_Method();
+            checkMax.findMaximum<int>(25, 63, 14);
+            checkMax.findMaximum<float>(4.2f, 5.6f, 69.4f);
+            checkMax.findMaximum<char>('a', 'b', 'c');
 
 
             ////****************Refactor2******************
-            //int checkInt = Refactor2_Generic_Class<int>.MaximumIntNumber(37, 1, 180);
-            //Console.WriteLine("Maximum Number:" + checkInt);
-            //float checkFloat = Refactor2_Generic_Class<float>.MaxFloatNumber(36.7f, 125.69f, 25.65f);
-            //Console.WriteLine("Maximum Number:" + checkFloat);
-            //string checkString = Refactor2_Generic_Class<string>.MaximumStringNumber("17", "86", "92");
-            //Console.WriteLine("Maximum Number:" + checkString);
+            Refactor2_Generic_Class<int> maxInt = new Refactor2_Generic_Class<int>(25, 46, 16);
+            maxInt.findMaximum();
+            Refactor2_Generic_Class<float> maxFloat = new Refactor2_Generic_Class<float>(7.5f, 8.0f, 2.6f);
+            maxFloat.findMaximum();
+            Refactor2_Generic_Class<string> maxStr = new Refactor2_Generic_Class<string>("not", "the", "problem");
+            maxStr.findMaximum();
 
 
 
