@@ -20,7 +20,11 @@ namespace Day13_Generics_Assignments
             }
             else if (third.CompareTo(first) > 0 && third.CompareTo(second) > 0)
             {
+<<<<<<< HEAD
                 Console.WriteLine("The Maximum is: " + third);
+=======
+                Console.WriteLine("The Maximum is : " + third);
+>>>>>>> Refactor1
                 return third;
             }
             return default;
